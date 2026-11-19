@@ -31,7 +31,7 @@ def classify(file: UploadFile, background_tasks: BackgroundTasks):
         output_file = f"resources/classified_logs_{uuid.uuid4().hex}.csv"
 
         df.to_csv(output_file, index=False)
-        print("Logs successfully classified. File saved as classified_logs.csv")
+        print("Logs successfully classified.")
 
         # Delete the unique temp file after FileResponse finishes streaming
         background_tasks.add_task(remove_file, output_file)

@@ -131,6 +131,16 @@ python classify.py
 
 ---
 
+## API Demo
+
+### 1. FastAPI Interactive Docs (Swagger UI)
+![FastAPI Swagger UI](assets/swagger-ui.png)
+
+### 2. Postman API Test
+![Postman Classification Response](assets/postman-demo.png)
+
+---
+
 ## Future Improvements
 * **Confidence-Based LLM Escalation:** Route Tier 2 ML predictions with `max(predict_proba) < 0.50` to the LLM fallback layer.
 * **Batch Embedding Inference:** Vectorize `embedding_model.encode()` across all non-regex logs in a single forward pass rather than encoding row-by-row.
