@@ -85,8 +85,8 @@ Evaluated on a stratified 30% holdout split (**687 logs** across 7 classes):
 
 ### 1. Clone the Repository & Create a Virtual Environment
 ```bash
-git clone <your-repo-url>
-cd <your-repo-name>
+git clone https://github.com/NavenduSingh17/hybrid-log-classifier.git
+cd hybrid-log-classifier
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
@@ -110,7 +110,7 @@ GROQ_API_KEY=your_groq_api_key_here
 ```bash
 uvicorn server:app --reload
 ```
-Once running, open the interactive Swagger UI at **`http://127.0.0`**.
+Once running, open the interactive Swagger UI at **`http://127.0.0.1:8000/docs`**.
 
 ### Classify a CSV File via API
 Send a `POST` request to `/classify/` with a `.csv` file containing `source` and `log_message` columns:
